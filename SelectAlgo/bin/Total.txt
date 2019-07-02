@@ -1,0 +1,83 @@
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+Test
+Entre 50 et 100, il y a 5 changements
+Entre 100 et 150, il y a 5 changements
+Entre 150 et 200, il y a 11 changements
+Entre 200 et 250, il y a 2 changements
+Entre 250 et 300, il y a 4 changements
+Entre 350 et 400, il y a 3 changements
+Entre 400 et 450, il y a 8 changements
+Entre 450 et 500, il y a 2 changements
+Equilibre de Nash atteint 10 fois
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+Test
+Entre 50 et 100, il y a 11 changements
+Entre 100 et 150, il y a 18 changements
+Entre 150 et 200, il y a 21 changements
+Entre 200 et 250, il y a 3 changements
+Entre 250 et 300, il y a 4 changements
+Entre 300 et 350, il y a 2 changements
+Entre 350 et 400, il y a 3 changements
+Entre 400 et 450, il y a 8 changements
+Entre 450 et 500, il y a 2 changements
+Equilibre de Nash atteint 20 fois
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+Test
+Entre 50 et 100, il y a 24 changements
+Entre 100 et 150, il y a 21 changements
+Entre 150 et 200, il y a 28 changements
+Entre 200 et 250, il y a 4 changements
+Entre 250 et 300, il y a 5 changements
+Entre 300 et 350, il y a 5 changements
+Entre 350 et 400, il y a 4 changements
+Entre 400 et 450, il y a 8 changements
+Entre 450 et 500, il y a 2 changements
+Equilibre de Nash atteint 30 fois
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+-Car PO :true
+Test
+Entre 50 et 100, il y a 28 changements
+Entre 100 et 150, il y a 26 changements
+Entre 150 et 200, il y a 30 changements
+Entre 200 et 250, il y a 6 changements
+Entre 250 et 300, il y a 7 changements
+Entre 300 et 350, il y a 6 changements
+Entre 350 et 400, il y a 4 changements
+Entre 400 et 450, il y a 8 changements
+Entre 450 et 500, il y a 2 changements
+Equilibre de Nash atteint 40 fois

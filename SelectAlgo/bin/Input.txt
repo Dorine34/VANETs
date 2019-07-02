@@ -1,0 +1,113 @@
+
+Class : Car
+Source : 1
+Throughput : 
+Localisation X : 102.0
+Localisation Y : 140.0
+Sensing Range : 
+	
+Class : Car
+Source : 2
+Throughput : 
+Localisation X : 152.0
+Localisation Y : 135.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 419.0
+Localisation Y : 65.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 368.0
+Localisation Y : 200.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 361.0
+Localisation Y : 118.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 137.0
+Localisation Y : 51.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 380.0
+Localisation Y : 217.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 129.0
+Localisation Y : 111.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 295.0
+Localisation Y : 271.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 439.0
+Localisation Y : 66.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 400.0
+Localisation Y : 81.0
+Sensing Range : 
+	
+Class : Car
+Source : -1
+Throughput : 
+Localisation X : 414.0
+Localisation Y : 209.0
+Sensing Range : 
+	
+Class : WiFi
+Source : 
+Throughput : 3.0
+Localisation X : 0.0
+Localisation Y : 0.0
+Sensing Range : 100
+	
+Class : WiFi
+Source : 
+Throughput : 5.0
+Localisation X : 0.0
+Localisation Y : 0.0
+Sensing Range : 100
+	
+Class : Cellular
+Source : 
+Throughput : 7.0
+Localisation X : 0.0
+Localisation Y : 0.0
+Sensing Range : 100
+	
+Class : Cellular
+Source : 
+Throughput : 10.0
+Localisation X : 0.0
+Localisation Y : 0.0
+Sensing Range : 100
+	
