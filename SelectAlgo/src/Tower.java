@@ -4,12 +4,15 @@
 /* 	Le débit fournit varie en fonction de la classe des techno de communication		*/
 /************************************************************************************/
 
-import jbotsim.Node;
+
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 
-import jbotsim.Message;
+import io.jbotsim.core.Message;
+import io.jbotsim.core.Node;
+
 
 public abstract class Tower extends Node {
 
@@ -37,7 +40,7 @@ public abstract class Tower extends Node {
 		this.throughputAvailable = 10;
 		this.throughputTotal = 10;
 		setIcon("/tower.png");
-		setSize(14);
+		setIconSize(14);
 		setSensingRange(100);
 	}
 
@@ -45,7 +48,7 @@ public abstract class Tower extends Node {
 		this.throughputAvailable = t;
 		this.throughputTotal = t;
 		setIcon("/tower.png");
-		setSize(14);
+		setIconSize(14);
 		setSensingRange(r);
 		if (this.getClass().equals(WiFi.class))
 		{
@@ -68,7 +71,7 @@ public abstract class Tower extends Node {
 		this.throughputAvailable = t;
 		this.throughputTotal = t;
 		setIcon("/tower.png");
-		setSize(14);
+		setIconSize(14);
 		setSensingRange(r);
 		this.setLocation(x,y);
 	}
