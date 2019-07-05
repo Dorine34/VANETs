@@ -1,4 +1,4 @@
-import jbotsim.Color;
+import io.jbotsim.core.Color;
 
 public class Cellular extends Tower{
 
