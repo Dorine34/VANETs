@@ -1,11 +1,11 @@
-import jbotsim.Color;
+import io.jbotsim.core.Color;
 
 public class WiFi extends Tower{
 
 	int HYSTERESIS=3;
 	public WiFi() {
 		super();
-		this.setColor(Color.yellow);
+		//this.setColor(Color.yellow);
 		// TODO Auto-generated constructor stub
 	}
 
