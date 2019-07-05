@@ -15,7 +15,22 @@ public class FileManager {
 	/************************************************************************/
 	Vector vectNode = new Vector();// comprend les données relatives aux objets utilisés
 	int size = 0;
+	char choix='g';//gen : g, max =m
+	char routage='r';//routage : r, aodv =a
 
+	public char getRoutage() {
+		return routage;
+	}
+	public void setRoutage(char routage) {
+		this.routage = routage;
+	}
+	public FileManager(char a, char b) {
+		this.choix=a;
+		this.choix=b;
+	}
+	public FileManager() {
+
+	}
 	public int vectNodeSize() {
 		return size;
 	}
@@ -271,9 +286,9 @@ public class FileManager {
 		}
 	}
 
-	public void writefos(String str) {
+	public void writefos(String str, String name) {
 		FileOutputStream fos = null;
-		try (FileWriter fw = new FileWriter("src/Output.txt", true);
+		try (FileWriter fw = new FileWriter( fileCorrespondsOutput(), true);
 				BufferedWriter bw = new BufferedWriter(fw);
 				PrintWriter out = new PrintWriter(bw)) {
 			out.println(str);
@@ -282,16 +297,7 @@ public class FileManager {
 		}
 	}
 	
-	public void writefTot(String str) {
-		FileOutputStream fos = null;
-		try (FileWriter fw = new FileWriter("src/Total.txt", true);
-				BufferedWriter bw = new BufferedWriter(fw);
-				PrintWriter out = new PrintWriter(bw)) {
-			out.println(str);
-		} catch (IOException e) {
-			// Gestion des exceptions en cas de problème d'accès au fichier
-		}
-	}
+
 
 	public void writefInput(String str, boolean writeAfter) {
 		FileOutputStream fos = null;
@@ -305,26 +311,34 @@ public class FileManager {
 	}
 	// a partir de output.txt : tri l'objet et l'insere dans total.txt
 	public void count(FileInputStream f) {
+		System.out.println("coucou");
 		// compteur du changement
 		Integer[] tab = new Integer[20];
 
 		int finalCountNE = 0;
+		int finalCountPO = 0;
+		
 		try {
 			byte[] buf = new byte[8];
 			int n = 0;
 			String str = null;
 			String nashStr = null;
 			String wordStr = null;
+			String word = null;
 			int countNE = 0;
+			int countPO = 0;
 
 			for (int i = 0; i < tab.length; i++) {
 				tab[i] = 0;
 			}
+			System.out.println("coucou 1");
 			boolean begPos = true;
 			boolean begNE = false;
 			while ((n = f.read(buf)) >= 0) {
-				for (byte bit : buf) {
-					// System.out.print("\t" + bit + "(" + (char) bit + ")");
+				
+				for (byte bit : buf) {/*
+					System.out.println("coucou 2");
+					 System.out.print("\t" + bit + "(" + (char) bit + ")");
 					if (bit == 32) {
 						wordStr = "";
 					}
@@ -335,8 +349,14 @@ public class FileManager {
 							finalCountNE++;
 							
 						}
-						System.out.println("TOTAL= " + countNE);
+						if (countPO==12)
+						{
+							finalCountPO++;
+							
+						}
+						//System.out.println("TOTAL= " + countNE);
 						countNE = 0;
+						countPO = 0;
 					}
 					if (begNE) {
 						nashStr += (char) bit;
@@ -344,6 +364,7 @@ public class FileManager {
 					if (bit == 45) {
 						begNE = true;
 						countNE++;
+						countPO ++;
 					}
 					if ((begPos) && (bit == 32)) {
 						int test = strToInt(str);
@@ -360,6 +381,11 @@ public class FileManager {
 						// System.out.println(nashStr+" contient "+nashStr.contains("eq :true"));
 						begNE = false;
 						nashStr = "";
+						System.out.println(word);
+					}
+					else
+					{
+						word += (char) bit;
 					}
 					if (bit == 32) {
 
@@ -368,6 +394,7 @@ public class FileManager {
 					if (begPos) {
 						str += (char) bit;
 					}
+					*/
 				}
 				buf = new byte[8];
 			}
@@ -385,9 +412,11 @@ public class FileManager {
 				e.printStackTrace();
 			}
 		}
+		
+		/*
 		FileOutputStream ftot = null;
 		String s = null;
-		try (FileWriter fw = new FileWriter("src/Total.txt", true);
+		try (FileWriter fw = new FileWriter(fileCorrespondsTotal(), true);
 				BufferedWriter bw = new BufferedWriter(fw);
 				PrintWriter out = new PrintWriter(bw)) {
 
@@ -408,9 +437,60 @@ public class FileManager {
 		} catch (IOException e) {
 			// Gestion des exceptions en cas de problème d'accès au fichier
 		}
+		*/
 
 	}
 
+	public String fileCorrespondsOutput()
+	{
+		/*
+		writefos((" ICI choix="+ choix+" ("+ (choix=='r')+" ) "+
+				" ICI routage="+ routage+" ("+ (choix=='a')+" ) "), fileCorrespondsTotal());
+		*/
+		if (this.choix=='g')
+		{
+			if (this.routage=='r')
+			{
+				return "src/Outputgr.txt";
+			}
+			if (this.routage=='a')
+			{
+				return "src/Outputga.txt";
+			}
+		}
+		if ((this.choix=='m')&& (this.routage=='r'))
+		{
+			return "src/Outputmr.txt";
+		}
+		return "src/Output.txt";
+	}
+
+	public char getChoix() {
+		return choix;
+	}
+	public void setChoix(char choix) {
+		this.choix = choix;
+	}
+	public String fileCorrespondsTotal()
+	{
+		if (this.choix=='g')
+		{
+			if (this.routage=='r')
+			{
+				return "src/Totalgr.txt";
+			}
+			if (this.routage=='a')
+			{
+				return "src/Totalga.txt";
+			}
+		}
+		if ((this.choix=='m')&& (this.routage=='r'))
+		{
+			return "src/Totalmr.txt";
+		}
+		return "src/Total.txt";
+	}
+	
 	public int strToInt(String sourceStr) {
 		int sourceInt = 0;
 		for (int i = 0; i < sourceStr.length(); i++) {
@@ -421,5 +501,9 @@ public class FileManager {
 		}
 		return sourceInt;
 	}
+	
+	
+	
+	
 
 }
