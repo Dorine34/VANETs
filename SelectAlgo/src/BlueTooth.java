@@ -1,4 +1,4 @@
-import jbotsim.Topology;
+
 
 public class BlueTooth extends Car{
 	/* Partie option blueTooth */
@@ -11,7 +11,7 @@ public class BlueTooth extends Car{
 		blueTooth = true;
 		blueToothThroughput = t;
 		setIcon("/car.png");
-		setSize(10);
+		setIconSize(10);
 		setSensingRange(100);
 	}
 
@@ -21,7 +21,7 @@ public class BlueTooth extends Car{
 		blueTooth = true;
 		blueToothThroughput = f;
 		setIcon("/car.png");
-		setSize(10);
+		setIconSize(10);
 		setSensingRange(100);
 	}
 	public BlueTooth(int s, float f, float x, float y, FileManager file) {
@@ -29,7 +29,7 @@ public class BlueTooth extends Car{
 		blueTooth = true;
 		blueToothThroughput = f;
 		setIcon("/car.png");
-		setSize(10);
+		setIconSize(10);
 		setSensingRange(100);
 	}
 	
@@ -38,7 +38,7 @@ public class BlueTooth extends Car{
 		blueTooth = true;
 		blueToothThroughput = 1;
 		setIcon("/car.png");
-		setSize(10);
+		setIconSize(10);
 		setSensingRange(100);
 	}
 
