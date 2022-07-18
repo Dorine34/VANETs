@@ -1,3 +1,11 @@
+/* Algorithme AODV, plus court chemin
+contient 2 scenarios :
+1er scenario : entree environnement statique, 12 véhicules dont deux sources
+2nd scenario : environnement dynamique, 5 véhicules statiques dont deux sources, et arrivée dynamique d'un autre véhicule
+
+*/
+
+
 package algoAODV;
 
 
@@ -133,7 +141,7 @@ public class MainAODV {
 		c1.setIntColor(2);
 
 
-		for (int i=0; i<29; i++)
+		for (int i=0; i<10; i++)
 		{
 			tp.addNode(new HighwayCar(0));
 		}
