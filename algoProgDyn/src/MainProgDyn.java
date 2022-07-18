@@ -1,4 +1,18 @@
-
+/************************************************************************************/
+/*Dans ce code : 																    */
+/*	Les tours ont la liste des voitures qui peuvent recevoir des informations	    */
+/*	Les voitures ont : - la liste des tours candidates								*/
+/*		-une seule tour, unique possibilité pour emettre			
+ *      
+ *      scenario 1 : 12 véhicules statiques dont 2 sources
+ *      scenario 2 : 5 véhicules immobile avec une source et arrivée d'un sixieme véhicule source
+ * 
+ * 	Possibilité de générer aléatoirement la position des véhicules
+ * 	Possibilité de charger la position des véhicules grâce à Input.txt
+ * 
+ * 	Sortie output.txt : temps des changements
+ * 	Sortie total.txt : temps des changements classés																				*/
+/************************************************************************************/
 
 
 
@@ -107,7 +121,7 @@ public class MainProgDyn {
 		c1.setIntColor(2);
 
 
-		for (int i=0; i<29; i++)
+		for (int i=0; i<10; i++)
 		{
 			tp.addNode(new HighwayCar(0));
 		}
